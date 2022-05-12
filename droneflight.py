@@ -11,7 +11,16 @@ drone.move_up(90)
 drone.move_forward(400)
 drone.move_forward(400)
 sleep(.5)
-# Drone will turn to the left 90 degrees and continue forward to the landing zone in 500cm
+# Drone will turn 90 degrees the left and continue forward
+drone.rotate_counter_clockwise(90)
+drone.move_forward(500)
+sleep(.5)
+# Drone will turn back to continue to the landing zone
+drone.rotate_counter_clockwise(90)
+drone.move_forward(400)
+drone.move_forward(400)
+sleep(.5)
+# Drone will return to landing zone completing the circle
 drone.rotate_counter_clockwise(90)
 drone.move_forward(500)
 sleep(.5)
